@@ -37,7 +37,10 @@ app.get('/home', (_, res) => {
 })
 
 app.get('/available', (_, res) => {
-  BooksStatus.show_all_books_status(res);
+  // BooksStatus.show_all_books_status(res);
+  BooksStatus.show_all_books_status(res)
+  .then((data) => res.send(data))
+  .catch((_) => res.send('Nox books found!'));
 })
 
 app.get('/books', (_, res) => {

@@ -4,7 +4,8 @@ let Schema = mongoose.Schema;
 
 let GenreSchema = new Schema(
   {
-    name: {type: String, required:true, maxLength: 100, minLength: 4}
+    name: {type: String, required:true, maxLength: 100, minLength: 4},
+    url: {type: String, required: false}
   }
 );
 
